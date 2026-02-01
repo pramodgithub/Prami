@@ -142,9 +142,11 @@ Open `WebContent/index.html` directly in a browser for a static preview (limited
 
 1. Start the backend API service locally (e.g., `http://localhost:8080/api`)
 2. Update `API_BASE` in frontend scripts to point to your backend instance
-3. Serve the frontend via:
-   - Simple HTTP server: `python -m http.server --directory WebContent`
-   - Java webapp (Tomcat/Jetty): Package both frontend and backend into a single WAR
+3. Serve the frontend via Java WAR file:
+   - Build WAR: `mvn clean package` (generates WAR in `target/` directory)
+   - Deploy to Tomcat: Copy WAR to `TOMCAT_HOME/webapps/`
+   - Deploy to Jetty: Configure WAR in Jetty deployment configuration
+   - Verify: Access frontend at `http://localhost:8080/prami` (adjust port/context path as needed)
 
 ### Production Deployment
 
