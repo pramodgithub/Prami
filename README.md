@@ -66,9 +66,71 @@ The frontend communicates with backend APIs to deliver a dynamic shopping experi
 
 ### Backend Key Components
 
-- **Beans**: Product, Store, User, Category, Collection, LocalStore, OnlineStore, PriceHistory, etc.
-- **DAOs**: ProductDao, StoreDao, UserDao, CategoryDao, CollectionDao, PriceHistoryDao, etc.
-- **Services**: Product search, pricing, store management, user authentication
+- **Beans**: Product, Store, User, Category, Collection, LocalStore, OnlineStore, PriceHistory, Activity, etc.
+- **DAOs**: ProductDao, StoreDao, UserDao, CategoryDao, CollectionDao, PriceHistoryDao, AcitivityDao, etc.
+- **Services**: Product search, pricing, store management, user authentication, activity tracking
+
+## Activity Engine
+
+The Activity Engine is a core backend component that tracks user interactions with products and stores, enabling personalized recommendations and analytics.
+
+### Purpose
+
+- **User Behavior Tracking**: Records product views, clicks, and purchases with geolocation and device info
+- **Analytics**: Aggregates activity data for product popularity, regional trends, and user engagement metrics
+- **Personalization**: Enables recommendation engines based on user activity history
+- **Purchase History**: Tracks user purchase patterns for order history and recommendations
+
+### Activity Data Captured
+
+- **User ID**: Identifier of the user performing the action
+- **Activity Type**: Category of action (view, click, purchase, wishlist, etc.)
+- **Product ID**: Reference to the product being interacted with
+- **Location Data**: Country, region, city, ZIP code, latitude, longitude
+- **User IP**: IP address for geo-targeting and fraud detection
+- **Timestamp**: Precise time of the activity
+
+### Activity Engine Components
+
+- **Activity Bean** (`Activity.java`): Data model for activity records
+- **ActivityDAO** (`AcitivityDao.java`): Database operations for activity tracking
+  - `insertActivity()`: Log new user activities
+  - `getProductViews()`: Count total product views
+  - `getPurchaseHistory()`: Retrieve user purchase history with auth validation
+
+### API Endpoints for Activity
+
+- `POST /api/activities` — log user activity (view, click, purchase)
+- `GET /api/activities/product/{id}` — get product view count
+- `GET /api/users/{id}/purchase-history` — retrieve user's purchase history (auth required)
+- `GET /api/analytics/trending` — get trending products by activity
+
+### Activity Tracking Example
+
+```javascript
+// Frontend: Track product view
+async function trackProductView(productId, userId) {
+  const activity = {
+    activityType: 1,  // 1 = view
+    userId: userId,
+    productId: productId,
+    userIP: getClientIP(),
+    country: getUserCountry(),
+    region: getUserRegion(),
+    city: getUserCity(),
+    zip: getUserZip(),
+    latitude: getLatitude(),
+    longitude: getLongitude()
+  };
+  
+  const res = await fetch(`${API_BASE}/api/activities`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(activity)
+  });
+  return res.json();
+}
+```
 
 ## How to Run / Deploy
 

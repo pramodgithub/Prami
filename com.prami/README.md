@@ -21,7 +21,12 @@
 - `GET /api/stores/{id}` — get store details
 - `GET /api/collections` — list collections
 - `POST /api/auth/login` — authenticate and receive token
-- `POST /api/users` — create user account
+- `POST /api/auth/register` — create user account
+- `GET /api/users/me` — get current user profile (auth required)
+- `POST /api/activities` — log user activity (view, click, purchase)
+- `GET /api/activities/product/{id}` — get product view count
+- `GET /api/users/{id}/purchase-history` — retrieve user's purchase history (auth required)
+- `GET /api/analytics/trending` — get trending products by activity
 
 Update these to match your actual routes if they differ.
 
@@ -90,10 +95,39 @@ Search (GET /api/search?q=shoe):
 }
 ```
 
+## Activity Engine
+
+The Activity Engine tracks user interactions with products and stores for analytics and personalization.
+
+### Key Features
+
+- **Activity Tracking**: Records user actions (views, clicks, purchases) with geolocation
+- **Product Popularity**: Aggregates view counts and engagement metrics
+- **Purchase History**: Maintains user transaction history for recommendations
+- **Geo-Analytics**: Tracks regional user behavior and trends
+
+### Database Schema
+
+- **activitytbl**: Stores all user activities
+  - activityType (int): Type of action
+  - userId (string): User identifier
+  - productId (int): Product being interacted with
+  - userIP (string): Client IP address
+  - userCountry, userRegion, userCity, userZip (string): Location data
+  - latitude, longitude (string): GPS coordinates
+  - activityTime (long): Unix timestamp
+
+### ActivityDAO Methods
+
+- `insertActivity(Activity activity)`: Log a new activity record
+- `getProductViews(int productId)`: Get total views for a product
+- `getPurchaseHistory(int userId, String token)`: Retrieve authenticated user's purchase history
+
 ## Running locally
 
 1. Set the application properties (port, DB, auth secrets) via environment variables or `application.properties`.
-2. Start the service (example for a Spring Boot app):
+2. Ensure activity tracking table (`activitytbl`) is created in the database.
+3. Start the service (example for a Spring Boot app):
 
 ```bash
 mvn spring-boot:run
@@ -101,7 +135,7 @@ mvn spring-boot:run
 ./gradlew bootRun
 ```
 
-3. Verify the API via `curl` or Postman.
+4. Verify the API via `curl` or Postman.
 
 ## API spec / Postman
 
