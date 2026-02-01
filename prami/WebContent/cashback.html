@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Prami.in | One Stop Shopping Experience</title>
+	<meta name="google-signin-client_id" content="844138340654-c2qpmjrn2p1fl79eneemq02fsp7govfh.apps.googleusercontent.com">
+	<meta name="description" content="Search, Browse & Discover the latest trends in Fashion, Decor & Accessories." />
+	<meta name="keywords" content="Curated product, curated stores, curated brands, Search, Browse, Discover, Shopping, Shopping Experience, one stop Shopping, one stop,best online Shopping Experience, hand picked, hand picked product, hand picked stores, hand picked brands, style inspiration, ideas, unique products,  " />
+	<meta name="author" content="Prami" />
+	<meta name="application-name" content="Prami">
+	<link rel="icon" href="/images/web/favicon.ico">
+	<link rel="shortcut" href="/images/web/favicon.ico">
+	<link rel="apple-touch-icon" sizes="150x150" href="/images/web/app_logo.png" />
+	<meta content="Prami.in | One Stop Shopping Experience" property="og:title">
+	<meta content="website" property="og:type">
+	<meta content="https://www.prami.com/" property="og:url">
+	<meta content="https://prami.in/images/about/1.jpg" property="og:image">
+	<meta content="200" property="og:image:width">
+	<meta content="80" property="og:image:height">
+	<meta content="Search, Browse & Discover the latest trends in Fashion, Decor, Gifts & Accessories. All in One Place." property="og:description">
+	<meta content="Prami" property="og:site_name">
+	<link rel="stylesheet" type="text/css" href="/static/css/common.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap-columns.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/profile.min.css" />
+	 <link rel="stylesheet" type="text/css" href="/static/css/footer.min.css" />
+	<!-- Search Box Css -->
+     <link rel="stylesheet" href="/static/css/jquery.typeahead.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<!-- Header Start -->
+<div class="search-box">
+	<div class="search-box-fluid">
+		<a class="navbar-brand" href="/"><img alt="prami" src="/images/web/final.png"></a>
+			<input class="flexsearch--input" type="text" placeholder="search">
+		<i id="filtersubmit" class="fa fa-search"></i>
+		<i class="fa fa-times fa-lg close-search" ></i>
+	</div>
+</div>
+<div class="bootstrap-iso">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class="border-bottom bg-white top-bar">
+		<div class="container-fluid">
+		<div class="top-bar-row align-items-center">
+		<div class="col-7 col-md-7">
+		<span class="mb-0">
+		<a href="#" class="mr-3 no-decor city-select"><span class="text-black fl-bigmug-line-phone351"></span> <span class="d-none d-md-inline-block ml-2 selected_city">Select City</span></a>
+		
+		</span>
+		</div>
+		<div class="col-5 col-md-5 text-right">
+		<a href="https://www.instagram.com/prami.in/" target="_blank" class="text-black icon-instagram"></a>
+		<a href="https://twitter.com/PramiTrends" target="_blank" class="text-black icon-twitter"></a>
+		<a href="https://www.facebook.com/pramitrends/" target="_blank" class="text-black icon-facebook"></a>
+		</div>
+		</div>
+		</div>
+	</div>
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+     
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-header-left">
+       <i class="myBtn fa fa-search fa-lg search-icon"></i>
+	      <div class="login">
+	      	<a class="cd-signin cd-profile-icon" href="#"> <i class="myBtn fa fa-user fa-lg profile-icon"></i></a>
+	      </div>
+      </div>
+     <div>
+     	 <a class="brand" href="/"><img alt="prami" src="/images/web/final.png"></a>
+     </div>
+    </div>
+   
+ <div class="login  navbar-header-right">
+ <i class="myBtn fa fa-search fa-lg search-icon"></i>
+ 	
+ </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav category-nav"></ul>
+       <ul class="nav navbar-nav navbar-right login">
+           <li><a href="" class='cd-signin login_tab' style='display: none;'> Login</a></li>
+            <li><a href="" class='cd-profile'></a></li>
+             <li class='cd-logout'><a href="" > Logout</a></li>
+    	</ul>
+      
+    </div><!-- /.navbar-collapse -->
+
+    
+  </div><!-- /.container-fluid -->
+  
+</nav>
+</div>
+<!-- Search Box  -->
+<div style="width:40%;float:left;margin-top: -102px;">
+	<form id="search_form_d2" name="search_form_d2" action="/search">
+	    <div class="typeahead__container">
+	        <div class="typeahead__field">
+	 
+	            <span class="typeahead__query">
+	                <input class="js-typeahead-game_v2" name="q" type="search" placeholder="Search" autocomplete="off">
+	            </span>
+	            <span class="typeahead__button">
+	                <button type="submit">
+	                    <i class="typeahead__search-icon"></i>
+	                </button>
+	            </span>
+	 
+	        </div>
+	    </div>
+	</form>
+	
+	</div>
+	<!-- Search Box End-->
+<!-- Header End -->
+<div class="profile-div">
+	<div>
+	<div>
+		<div>
+
+            <div class="card hovercard login">
+                <div class="cardheader">
+ 					
+                </div>
+                <i class="fa fa-pencil-square-o fa-lg favorite profile-edit cd-signin"></i>
+                <div class="avatar">
+                	<img id="profile-image" alt="">
+                </div>
+                <div class="info">
+                	<div>
+                      Hi!  
+                    </div>
+                    <div class="title">
+                        
+                    </div>
+                    <div class="desc"></div>
+                   
+                </div>
+                
+            </div>
+
+        </div>
+
+	</div>
+</div>
+</div>
+<div class="profile-btn-group" >
+  <div onclick="location.href='/profile';" style="width:50%">My Favourite</div>
+  
+  <div onclick="location.href='/cashback';" style="width:50%">Cashback</div>
+</div>
+  
+  
+  
+  
+<div class="profile-btn-group" >
+  <h2>Your Purchase History</h2>
+</div>
+<div class="stats-container">
+	<span class="product_price"><span>&#8377;</span> 0</span>
+	<span class="product_name">Cashback Received</span>
+ </div>
+<div class="purchase-div">
+	<table class="rwd-table">
+	  <tr>
+	  	<th>#</th>
+	  	<th>Date</th>
+	    <th>Product</th>
+	    <th>Order<br>Status</th>
+	    <th>Cashback <br>Amount</th>
+	    <th>Cashback <br>Status</th>
+	  </tr>
+	  
+	</table>
+</div>
+<footer>
+        <div class="footer-bar">
+		    <div class="bar-wrap">
+		        <ul class="links">
+		            
+		            
+		            <li><a href="#">Home</a></li>
+		            <li><a href="/privacy.html">Privacy</a></li>
+		            <li><a href="#">About</a></li>
+		        </ul>
+		        <div class="social">
+		            <a href="https://www.facebook.com/pramitrends/" class="fb" target="_blank">
+		                <span data-icon="f" class="icon"></span>
+		                <span class="info">
+		                </span>
+		            </a>
+		            <a href="https://twitter.com/PramiTrends" class="tw" target="_blank">
+		                <span data-icon="T" class="icon"></span>
+		                <span class="info">
+		                </span>
+		            </a>
+		            <a href="https://plus.google.com/108738528726805122628" class="gp" target="_blank">
+		                <span data-icon="+" class="icon"></span>
+		                <span class="info">
+		                </span>
+		            </a>
+		            <a href="https://in.pinterest.com/pramitrends/" class="pin" target="_blank">
+		                <span data-icon="1" class="icon"></span>
+		                <span class="info">
+		                </span>
+		            </a>
+		            <a href="https://www.instagram.com/prami.in/" class="insta" target="_blank">
+		                <span data-icon="&#x00DC;" class="icon"></span>
+		                <span class="info">
+		                </span>
+		            </a>
+		            <!-- </br>
+		            <a href="https://www.facebook.com/pramitrends/" class="fb" target="_blank">
+		                <span data-icon="f" class="icon"></span>
+		                <span class="info">
+		                </span>
+		            </a>
+		             -->
+		        </div>
+		        
+		        <div class="clear"></div>
+		        <div class="copyright">&copy; prami <span class="curr-year"></span> All Rights Reserved | contactus@prami.in</div>
+		    </div>
+		</div>
+
+    </footer>	
+
+<!-- Login Box -->
+	<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+		<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+			<ul class="cd-switcher">
+				<li><a href="#0">Sign in</a></li>
+				<li><a href="#0">New account</a></li>
+			</ul>
+			<ul class="profile-switcher">
+				<li><a href="#0">Profile</a></li>
+				<li><a href="#0">Password</a></li>
+			</ul>
+
+			<div id="cd-login"> <!-- log in form -->
+				<form class="cd-form">
+				
+					<p style="text-align: left;margin:  -18px 0px -18px 0px;color:red;" id='login_error_message'></p>
+					
+					<div class="socialgroup">
+				    
+				    <div class="google_signin">
+				        <span class="g-signin2" data-onsuccess="onSignIn" data-theme="light" data-width="200" data-height="38" data-longtitle=true></span>
+				    </div>
+				</div>
+					
+		    		<p style="text-align: center;margin-right: -15px;"> --- or ----</p>
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="signin-username">Username</label>
+						<input class="full-width has-padding has-border" id="signin-username" type="text" placeholder="Username">
+						<span class="cd-error-message uname_error">Min 6 to 10 character</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signin-password">Password</label>
+						<input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Password">
+						<a href="#0" class="hide-password">Show</a>
+						<span class="cd-error-message pass_error">Min 6 to 15 character</span>
+					</p>
+
+					<!-- <p class="fieldset">
+						<input type="checkbox" id="remember-me" checked>
+						<label for="remember-me">Remember me</label>
+					</p> -->
+
+					<p class="fieldset">
+						<input class="full-width signin-button" type="submit" value="Login">
+					</p>
+					
+					
+				</form>
+				
+				<p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-login -->
+
+			<div id="cd-signup"> <!-- sign up form -->
+				<form class="cd-form">
+				<p style="text-align: left;margin:  -18px 0px -18px 0px;color:red;" id='signup_error_message'></p>
+				<div class="socialgroup">
+				    
+				    <div class="google_signin">
+				        <span class="g-signin2" data-onsuccess="onSignIn" data-theme="light" data-width="200" data-height="38" data-longtitle=true></span>
+				    </div>
+				</div>
+					
+		    		<p style="text-align: center;margin-right: -15px;"> --- or ----</p>
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="signup-username">Username</label>
+						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
+						<span class="cd-error-message up_uname_error">Min 6 to 10 character</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signup-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message up_email_error">Enter valid email</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signup-password">Password</label>
+						<input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="Password">
+						<a href="#0" class="hide-password">Hide</a>
+						<span class="cd-error-message up_pass_error">Min 6 to 15 character</span>
+					</p>
+
+					<p class="fieldset">
+						
+						<input type="radio" name='gender' id="male" value="Male" checked placeholder="Male">
+						<label for="male" style="padding: 0px 28px 0px 2px;">Male</label>
+						<input type="radio" name='gender' id="female" value="Female">
+						<label for="female">Female</label>
+						
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding signup-button" type="submit" value="Create account">
+					</p>
+				</form>
+				
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-signup -->
+
+			<div id="cd-reset-password"> <!-- reset password form -->
+				<p class="cd-form-message">Lost your password? Please enter your registerd email address. You will receive a new password.</p>
+
+				<form class="cd-form">
+					<p style="text-align: left;margin:  -18px 0px -18px 0px;color:red;" id='forgot_error_message'></p>
+					<p style="text-align: center;margin:  -18px 0px -18px 0px;display:none;" id='forgot_loader' ><img src='/images/web/forgot-loader.gif' height="40px"/></p>
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="reset-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message forgot_email_error">Enter valid email</span>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding forgot-button"  type="submit" value="Reset password">
+					</p>
+				</form>
+
+				<p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+			</div> <!-- cd-reset-password -->
+			
+			<div id="cd-edit-profile"> <!-- Profile update form -->
+				
+				<form class="cd-form">
+					<p style="text-align: left;margin:  -18px 0px -18px 0px;color:red;" id='profile_error_message'></p>
+					<p style="text-align: center;margin:  -18px 0px -18px 0px;display:none;" id='profile_loader' ><img src='/images/web/forgot-loader.gif' height="40px"/></p>
+					
+					
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="first-name">First Name</label>
+						<input class="full-width has-padding has-border" id="first-name" type="text" placeholder="First Name">
+						<span class="cd-error-message first-name_error">Please enter First Name</span>
+					</p>
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="last-name">Last Name</label>
+						<input class="full-width has-padding has-border" id="last-name" type="text" placeholder="Last Name">
+						<span class="cd-error-message last-name_error">Please enter Last Name</span>
+					</p>
+					
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="update-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="update-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message update-email_error">Enter valid email</span>
+					</p>
+					<p class="fieldset">
+						
+						<input type="radio" name='update-gender' id="update-male" value="male" checked placeholder="Male">
+						<label for="male" style="padding: 0px 28px 0px 2px;">Male</label>
+						<input type="radio" name='update-gender' id="update-female" value="female">
+						<label for="female">Female</label>
+						
+					</p>
+					<p class="fieldset">
+						<input class="full-width has-padding update-profile-submit"  type="submit" value="Update Profile">
+					</p>
+				</form>
+
+				<p class="cd-form-bottom-message"></p>
+			</div> <!-- Profile update form -->
+			
+			<div id="cd-update-password"> <!-- Profile update form -->
+				
+				<form class="cd-form">
+					<p style="text-align: left;margin:  -18px 0px -18px 0px;color:red;" id='password_reset_error_message'></p>
+					<p style="text-align: center;margin:  -18px 0px -18px 0px;display:none;" id='password_reset_loader' ><img src='/images/web/forgot-loader.gif' height="40px"/></p>
+						
+					
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="old-password">Old Password</label>
+						<input class="full-width has-padding has-border" id="old-password" type="text"  placeholder="Old Password">
+						<a href="#0" class="hide-password">Hide</a>
+						<span class="cd-error-message old_pass_error">Min 6 to 15 character</span>
+					</p>
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="new-password">New Password</label>
+						<input class="full-width has-padding has-border" id="new-password" type="text"  placeholder="New Password">
+						<a href="#0" class="hide-password">Hide</a>
+						<span class="cd-error-message new_pass_error">Min 6 to 15 character</span>
+					</p>
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="retype-password">Retype Password</label>
+						<input class="full-width has-padding has-border" id="retype-password" type="text"  placeholder="Retype Password">
+						<a href="#0" class="hide-password">Hide</a>
+						<span class="cd-error-message retype_pass_error">Min 6 to 15 character</span>
+						<span class="cd-error-message match_error">Password does not match</span>
+					</p>
+					
+					
+					<p class="fieldset">
+						<input class="full-width has-padding update-password-submit"  type="submit" value="Update Password">
+					</p>
+				</form>
+
+				<p class="cd-form-bottom-message"></p>
+			</div> <!-- Profile update form -->
+			<a href="#0" class="cd-close-form">Close</a>
+		</div> <!-- cd-user-modal-container -->
+	</div>
+		<!-- location modal box -->
+	<div class="cd-location-modal">
+	    <div class="cd-location-modal-container">
+	
+	        <section id="cities" class="cities-area item-full text-center cell-items default-padding">
+	            <div class="container">
+	                <div class="row">
+	                    <div class="col-md-12">
+	                        <div class="site-heading text-center">
+	                            <h2> Select City</h2>
+	
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="row cities-items ">
+	
+	                </div>
+	            </div>
+	        </section>
+	
+	        <a href="#0" class="cd-close-form-black">Close</a>
+	    </div>
+	</div>
+	<!-- end location modal box -->
+	<script src="/static/js/modernizr.custom.min.js"></script>
+	<script src="/static/js/modernizr.min.js"></script>
+	<script src="/static/js/jquery.min.js"></script>
+	<script src="/static/js/common.min.js"></script>
+	<script src="/static/js/isotope.pkgd.min.js"></script>
+	<script src="/static/js/flickity.pkgd.min.js"></script>
+	<script src="/static/js/main.min.js"></script>  
+	<script src="/static/js/cashback.min.js"></script>
+	<script src="/static/js/jquery.typeahead.min.js"></script>
+	<script src="/static/js/typeahead.min.js"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script>
+		$t(".city-select").topbar();
+	</script>
+	
+</body>
+</html>

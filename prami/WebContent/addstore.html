@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Visual Admin Dashboard - New Local Store</title>
+    <meta name="description" content="">
+    <meta name="author" content="templatemo">
+    <!-- 
+    Visual Admin Template
+    http://www.templatemo.com/preview/templatemo_455_visual_admin
+    -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet' type='text/css'>
+
+    <link href="/static/custom/bootstrap.min.css" rel="stylesheet">
+
+    
+    
+    <script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+	
+	
+	<link rel="stylesheet " href="/static/custom/multi-step-form.css"></link> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  </head>
+  <body>  
+
+    <!-- Left column -->
+ 
+      
+
+		
+ 
+
+<section class="multi-step-form">
+	<h2> Add New Store</h2>
+	<div class="steps">
+		<button class="active store" type="button" disabled>Store</button>
+		<button type="button" disabled>Address</button> 
+		<button type="button" disabled>Contact</button> 
+		<button type="button" disabled>Services</button>
+		<button type="button" disabled>Content</button>
+	</div>
+	<span id="result"></span>
+	<form action="#" method="post" id="storeAdditionForm">
+		
+		<fieldset aria-label="Step One" tabindex="-1" id="step-1">
+			<h2>Store</h2>
+			<p>
+				<label for="storename">Store Name</label>
+				<input class="form-control" type="text" name="storename" id="storename" required>
+			</p>
+			<p>
+				<label for="storetagline">Store Small Description</label>
+				<input class="form-control" type="text" name="storetagline" id="storetagline" required>
+			</p>
+			<p>
+				<label for="storedescription">Store Description</label>
+				<input class="form-control" rows="3" name="storedescription" id="storedescription" required></input>
+			</p>
+			<p>
+				<label for="storelogo">Store Logo<span class="optional">(Max size : 50-60kb, square)</span></label>
+				<input class="form-control" type="file" name="storelogo" id="storelogo"  accept="image/*"  required>
+				<img class="service-image" >	
+			</p>
+			
+			 <p>
+				<label for="storeimage">Store Image<span class="optional">(Max size : 100-300kb)</span></label>
+				<input class="form-control" type="file" name="storeimage" id="storeimage" accept="image/*"  required>
+				<img class="content-image" >
+			</p>
+			<p>
+      			<label for="isverified">Verified</label>
+      			<input class="form-control" type="checkbox" value="1" name="isverified" id="isverified">
+      			
+			</p>
+			<p>
+				<label for="estdate">Est. Date<span class="optional">(Optional)</span></label>
+				<input class="form-control" type="text" name="estdate" id="estdate">
+			</p>
+			
+			<p>
+				<button class="btn btn-default btn-next" type="button" aria-controls="step-2">Next</button>
+			</p>
+		</fieldset> 
+		 <fieldset aria-label="Step Two" tabindex="-1" id="step-2">
+			<h2>Address</h2>
+			<p>
+				<label for="address1">Address 1</label>
+				<input class="form-control" type="text" name="address1" id="address1" required>
+			</p>
+		
+			<p>
+				<label for="landmark">Landmark<span class="optional">(Optional)</span></label>
+				<input class="form-control" type="text" name="landmark" id="landmark">
+			</p>
+			<p>
+				<label for="city">City</label>
+				<select class="form-control" name="city" id="city" required>
+				
+				</select>
+			</p>
+			<p>
+				<label for="area">Area</label>
+				<select class="form-control" name="area" id="area" required>
+				<option value="">Select Area..</option>
+					
+				</select>
+			</p>
+			<p>
+				<label for="pin">Area Pin <span class="optional">(eg. 411001)</span></label>
+				<input class="form-control" type="pin" name="pin" id="pin" required>
+			</p>
+			<p>
+				<label for="geolocation">Geo Location<span class="optional">(optional)</span></label>
+				<input class="form-control" type="text" name="geolocation" id="geolocation">
+			</p>
+			<p>
+				<label for="phonenumber">Phone Number <span class="optional">(optional)</span></label>
+				<input class="form-control" type="tel" name="phonenumber" id="phonenumber">
+			</p>
+			
+			<p>
+				<button class="btn btn-default btn-prev" type="button" aria-controls="step-1">Previous</button>
+				<button class="btn btn-default btn-next" type="button" aria-controls="step-3">Next</button>
+			</p>
+		</fieldset> 
+		<fieldset aria-label="Step Three" tabindex="-1" id="step-3">
+			<h2>Social</h2>
+			
+			<p>
+				<label for="email">Email </label>
+				<input class="form-control" type="text" name="email" id="email" >
+			</p>
+			<p>
+				<label for="website">WebSite<span class="optional">(optional)</span></label>
+				<input class="form-control" type="text" name="website" id="website" >
+			</p>
+			<p>
+				<label for="website">Social<span class="optional">(optional)</span></label>
+				<div id="addSocial" class="addElement">Add New Account</div>
+				<div class="social">
+				</div>
+			</p>
+			<p>
+				<button class="btn btn-default btn-prev" type="button" aria-controls="step-2">Previous</button>
+				<button class="btn btn-default btn-next" type="button" aria-controls="step-4">Next</button>
+			</p>
+		</fieldset> 
+		<fieldset aria-label="Step Four" tabindex="-1" id="step-4">
+			<h2>Service</h2>
+			<div id="addService" class="addElement">Add New Service</div>
+			<div class="services-div"></div>
+			<p>
+				<button class="btn btn-default btn-prev" type="button" aria-controls="step-3">Previous</button>
+				<button class="btn btn-default btn-next" type="button" aria-controls="step-5">Next</button>
+			</p>
+		</fieldset>
+		<fieldset aria-label="Step Five" tabindex="-1" id="step-5">
+			<h2>Content</h2>
+			<div id="addContent" class="addElement">Add New Content</div>
+			<div class="content-div"></div>
+			<div>
+				<button class="btn btn-success" type="submit">Submit</button> 
+				<button class="btn btn-default btn-edit" type="button">Edit</button> 
+				<!-- <button class="btn btn-danger" type="reset">Start Over</button> -->
+			</div>
+		</fieldset> 
+		
+		
+	</form>
+</section>
+
+<textarea style="display:none" id="socialtemplate">
+		
+			<div class="socialrow">
+			  <div class="column social-selection">
+					<select class="form-control" name="social-name-{0}" id="social-name-{0}" required>
+						<option value="">Select...</option>
+						<option value="1">Instagram</option>
+						<option value="2">facebook</option>
+						<option value="3">YouTube</option>
+						
+					</select>
+			  </div>
+			  <div class="column social-url">
+			  		<input class="form-control" type="text" name="social-url-{0}" id="social-url-{0}" required>
+			  </div>
+			  <div class="column closeElement">X</div>
+			</div>
+			
+	</textarea>
+	
+<textarea style="display:none" id="services-template">
+			<hr>
+			<div class="closeService">x</div>
+			<div>
+				<p>
+					<label for="services-name-{0}">Service {0} </label>
+					<input class="form-control" type="text" name="services-name-{0}" id="services-name-{0}" required>
+				</p>
+				<p>
+					<label for="services-description-{0}">Service {0} Description<span class="optional">(optional)</span></label>
+					<input class="form-control" type="text" name="services-description-{0}" id="services-description-{0}" >
+				</p>
+				<p>
+					<label for="services-image-{0}">Service {0} Image<span class="optional">(max. 400 x 400 , 100kb)</span></label>
+					<input class="form-control" type="file" name="services-image-{0}" id="services-image-{0}" required>
+					<img class="service-image services-image-{0}" >					
+				</p>
+				<p>
+	      			<label for="services-iscustomizable-{0}">Customizable</label> 
+	      			<input class="form-control"  type="checkbox" value="1" name="services-iscustomizable-{0}" id="services-iscustomizable-{0}" >
+				</p>
+				<p>
+					<label for="services-pricerange-{0}">Price Range</label>
+					<input class="form-control" type="text" name="services-pricerange-{0}" id="services-pricerange-{0}" >
+				</p>
+			</div>
+
+</textarea>	
+<textarea style="display:none" id="content-template">
+			<hr>
+			<div class="closeContent">x</div>
+			<div>
+				<p>
+					<label for="content-title-{0}">Content {0} </label>
+					<input class="form-control" type="text" name="content-title-{0}" id="content-title-{0}"  required>
+				</p>
+				<p>
+					<label for="content-description-{0}">Content {0} Description</label>
+					<input class="form-control" type="text" name="content-description-{0}" id="content-description-{0}" required>
+				</p>
+				<p>
+					
+					<label for="content-image-{0}">Service {0} Image<span class="optional">(max. 300kb)</span></label>
+					<input class="form-control" type="file" name="content-image-{0}" required>
+					<img class="content-image content-image-{0}" >					
+				</p>
+				<p>
+	      			<label for="youtubeid-{0}">Youtube ID <span class="optional">(eg. YykjpeuMNEk )</span>
+	      			<input class="form-control" type="text" name="content-youtubeid-{0}" id="content-youtubeid-{0}" required>
+	      			</label>
+				</p>
+			</div>
+</textarea>		
+
+
+    
+    <!-- JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="/static/custom/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/static/custom/additional-methods.min.js"></script>
+<script type="text/javascript" src="/static/custom/multi-step-form.js"></script>
+  </body>
+</html>
