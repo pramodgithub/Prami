@@ -1,4 +1,4 @@
-# Prami — One Stop Shopping (Frontend)
+# Prami — One Stop Shopping
 
 ## Overview
 
